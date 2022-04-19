@@ -1,5 +1,7 @@
 # Guide for Outings
 
+# [Live Site](https://guide-for-outings.web.app/)
+
 - This is tourist guide website
 - Available packages are given
 - Checkout is given in protected route.
