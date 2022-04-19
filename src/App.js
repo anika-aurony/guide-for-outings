@@ -1,9 +1,22 @@
-import logo from './logo.svg';
+
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import About from './component/About/About';
+import Home from './component/Home/Home/Home';
+import Header from './component/Shared/Header/Header';
+
 
 function App() {
   return (
-    <div className="App">
+    <div >
+      <Header></Header>
+      <Routes>
+        <Route path="/" element={ <Home/>}/>
+        <Route path="about" element={ <About/>} />
+
+
+      </Routes>
+     
       
     </div>
   );
