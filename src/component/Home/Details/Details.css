@@ -1,6 +1,6 @@
 .detail-container{
-    display: flex;
-    /* grid-template-columns: repeat(2, 1fr); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
     padding: 30px;
     padding-left: 40px;
@@ -11,5 +11,12 @@
     height: 400px;
     margin: 10px;
     border-radius: 10px;
+    
+}
+@media only screen and (max-width: 576px){
+    .detail-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
     
 }
