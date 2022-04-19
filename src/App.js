@@ -9,6 +9,8 @@ import Blog from './component/Blog/Blog';
 import NotFound from './component/Shared/NotFound/NotFound';
 import Login from './component/Login/Login';
 import Register from './component/Register/Register';
+import Checkout from './component/Checkout/Checkout';
+import RequiredAuth from './component/RequiredAuth/RequiredAuth';
 
 
 function App() {
@@ -22,6 +24,11 @@ function App() {
         <Route path="/blog" element={ <Blog></Blog>} />
         <Route path="/login" element={ <Login></Login>} />
         <Route path="/register" element={ <Register></Register>} />
+        <Route path="/checkout" element={
+          <RequiredAuth>
+            <Checkout></Checkout>
+          </RequiredAuth>
+        }></Route>
         <Route path="*" element={ <NotFound></NotFound>} />
         
 
