@@ -1,7 +1,14 @@
-# Getting Started with Create React App
+# Guide for Outings
+
+- This is tourist guide website
+- Available packages are given
+- Checkout is given in protected route.
+- Users can book package
+- Here, bootstrap, react, firebase are used in this project
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-- This is tourist guide website
+
 ## Available Scripts
 
 In the project directory, you can run:
