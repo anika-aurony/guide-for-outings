@@ -11,6 +11,7 @@ const Login = () => {
     const navigate = useNavigate()
     const location = useLocation();
     let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -21,6 +22,12 @@ const Login = () => {
 
     if (user) {
         navigate(from, { replace: true });
+    }
+
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error.message}</p>
+           
+
     }
 
     const handleSubmit = event => {
@@ -39,7 +46,7 @@ const Login = () => {
 
         <div className='container w-50 mx-auto'>
             <SocialLogin></SocialLogin>
-            <h3 className='text-success text center mt-3' >Please Login</h3>
+            <h3 className='text-success text center mt-3 title' >Please Login</h3>
             <Form onSubmit={handleSubmit}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>Email address</Form.Label>
@@ -54,10 +61,11 @@ const Login = () => {
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                     <Form.Check type="checkbox" label="Check me out" />
                 </Form.Group>
-                <Button variant="success" type="submit">
+                <Button variant="success" className='w-50 mx-auto d-block mb-3' type="submit">
                     Login
                 </Button>
             </Form>
+            {errorElement}
             <p>New to GUIDE FOR OUTINGS? <Link to="/register" className='text-danger pt-2 text-decoration-none' onClick={navigateRegister}>Please Register</Link></p>
         </div>
     );

@@ -10,23 +10,23 @@ const SocialLogin = () => {
     let errorElement;
     if (error) {
         errorElement =
-          <div>
-            <p className='text-danger'>Error: {error.message}</p>
-          </div>
-        
-      }
-    
-      if(user){
-          navigate('/home')
-      }
+            <div>
+                <p className='text-danger'>Error: {error.message}</p>
+            </div>
+
+    }
+
+    if (user) {
+        navigate('/home')
+    }
     return (
         <div>
             <div>
-                <button onClick={()=> signInWithGoogle()}
-                className='btn btn-success d-block w-75 mx-auto  mt-3 '>
-                    <img className='px-2' style={{width: '50px'}} src={google} alt="" />
+                <button onClick={() => signInWithGoogle()}
+                    className='btn btn-success d-block w-50 mx-auto  mt-3 '>
+                    <img className='px-2' style={{ width: '50px' }} src={google} alt="" />
                     Google Sign In
-                    </button>
+                </button>
             </div>
             {errorElement}
             <div className='d-flex mt-3 align-items-center'>
