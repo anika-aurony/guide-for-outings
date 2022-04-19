@@ -4,6 +4,7 @@
 - Available packages are given
 - Checkout is given in protected route.
 - Users can book package
+- Also blog and about are added
 - Here, bootstrap, react, firebase are used in this project
 
 
